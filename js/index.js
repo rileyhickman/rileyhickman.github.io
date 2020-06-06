@@ -5,7 +5,7 @@ window.onload = function(){
 
 function handleResize(){
     var width = $(window).width();
-    document.getElementById("name").innerHTML = width < 466 ? "SH" : "Shane Hickman";
+    document.getElementById("name").innerHTML = width < 466 ? "SH" : "Riley Hickman";
 }
 
 var animDuration = 500;
