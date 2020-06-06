@@ -1,0 +1,413 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Shane Hickman</title>
+        <meta name="description" content="Personal Website & Resume">
+        <meta name="author" content="Shane Hickman">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/new-css.css">
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav" onclick="hamburgerOut()">
+            <a class="nav-icon left animated fadeInLeft" onclick="hamburger()"><i class="icon-reorder"></i></a>
+            <a class="nav-icon right animated fadeInRight" href="https://www.linkedin.com/in/shane-hickman-2a813414a/" target="_blank" onclick="hamburgerOut()"><i id="linkedin" class="icon-linkedin-sign"></i></a>
+            <a class="nav-icon right animated fadeInRight" href="mailto:srhickma@edu.uwaterloo.ca"><i id="mail" class="icon-envelope" onclick="hamburgerOut()"></i></a>
+            <a class="nav-icon right animated fadeInRight" href="https://github.com/srhickma" target="_blank"><i id="github" class="icon-github" onclick="hamburgerOut()"></i></a>
+            <h2 id="name" class="no-select animated fadeInDown" onclick="hamburgerOut()">Shane Hickman</h2>
+        </div>
+
+        <div id="hamburger" style="display:none" class="animated fadeInUp" onclick="hamburgerOut()">
+            <div id="hamburger-content">
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('about')">About Me</h2>
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('experience')">Experience</h2>
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('side-projects')">Side Projects</h2>
+                <h2 class="no-select" onclick="window.location = 'pdf/viewer.html#name=resume'">Résumé</h2>
+                <h2 class="no-select" onclick="window.location = 'pdf/viewer.html#name=cv'">Curriculum Vitae</h2>
+            </div>
+        </div>
+
+        <div id="info" class="animated fadeInUpBig">
+            <div id="about" class="section-slice">
+                <div class="layer vertical-center-div">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div id="about-me" class="layer">
+                    <img src="res/me.jpg" class="no-select"/>
+                    <div class="vertical-center-div">
+                        <h2>Hi, I'm Shane Hickman, Software Developer and Enthusiast</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <p>Hi I'm Shane! I am a third year undergraduate student at the University of Waterloo
+                            pursuing a Bachelor of Software Engineering (BSE) degree.</p>
+                        <p>I am passionate about engineering and computer science and I love to learn. I like to dig down
+                            into old tech to see what makes it tick, as well as explore new and emerging technologies.
+                            I often find myself obsessing over my latest ideas and enjoy the freedom and challenge of
+                            implementing something entirely new from scratch. I would never turn down an opportunity to get
+                            my hands dirty with new project or problem!</p>
+                        <p>I spend most of my free time working on side projects, researching and
+                            scheming up new ideas, listening to music, and playing video games. Lately I have been
+                            particularly interested in learning and experimenting with Rust. My
+                            <a href="https://github.com/srhickma/padd">current project</a> is a utility for formatting text
+                            (primarily code) by scanning, parsing, and reconstructing text based on a set of patterns.</p>
+                        <b>Languages I have used:</b>
+                        <ul>
+                            <li>Strong Experience: Java, Rust, Go, Kotlin, C, C++, C#, SQL</li>
+                            <li>Fair Experience: Scala, PHP, JavaScript, HTML, CSS, PBasic, Assembly, MATLAB</li>
+                            <li>Used Occasionally: NodeJS, Ruby, Python, VHDL, BASH</li>
+                        </ul>
+                        <b>Technologies I have used:</b>
+                        <ul>
+                            <li>Server/Cloud: REST, AWS, Heroku, NGINX, SocketIO, Spring, UNIX</li>
+                            <li>Database: yugabyteDB, MongoDB, PostgreSQL, MySQL, Hibernate, JPA, Diesel, gh-ost</li>
+                            <li>Security: JWT, AES-CTR, HMAC, RSA, TLS, OpenSSH, OpenSSL</li>
+                            <li>Deployment: Ansible, Terraform, Docker, Kubernetes</li>
+                            <li>Build/CI: Gradle, Maven, [C]Make, Jenkins, TravisCI, various code coverage tools</li>
+                            <li>Monitoring: Datadog, Prometheus, LogDNA, Sentry</li>
+                            <li>App Development: Unity3D, Photon, UWP, Andrioid Studio, JavaFX, Swing</li>
+                            <li>Editors: Spacemacs, Visual Studio [Code], anything by JetBrains</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="experience" class="section-slice">
+                <div class="layer">
+                    <h2 class="section-title">Experience</h2>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer">
+                    <div class="experience-banner">
+                        <a href="https://www.yugabyte.com/" target="_blank"><h2 class="experience-title ten-zero-margin">YugaByte</h2></a>
+                        <div class="experience-banner-data">
+                            <h2 class="ten-zero-margin">May to Aug, 2019</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div class="experience">
+                        <div class="experience-details">
+                            <h3 class="ten-zero-margin">Software Engineer Intern - Query Layer Team</h3>
+                        </div>
+                        <ul>
+                            <li>Member of Query Layer team, working to integrate Postgres fronted with distributed document store backend.</li>
+                            <li>Wrote robust and portable shared memory library to improve system catalog cache consistency across nodes.</li>
+                            <li>Added support for Postgres role-based access control, ensuring consistency in a distributed environment.</li>
+                            <li>Designed and implemented a gflag-based configuration mechanism to make Postgres configurable through YugaByte.</li>
+                            <li>Contributor on multiple open-source projects at YugaByte, including <a href="https://github.com/YugaByte/yugabyte-db/commits?author=srhickma">yugabyte-db</a>.</li>
+                        </ul>
+                        <img class="experience-img" style="width:256px;margin:40px" src="res/yugabyte.svg"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer">
+                    <div class="experience-banner">
+                        <a href="https://www.faire.com/" target="_blank"><h2 class="experience-title ten-zero-margin">Faire</h2></a>
+                        <div class="experience-banner-data">
+                            <h2 class="ten-zero-margin">Sept to Dec, 2018</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div class="experience">
+                        <div class="experience-details">
+                            <h3 class="ten-zero-margin">Backend Developer Intern</h3>
+                        </div>
+                        <ul>
+                            <li>Architected an inter-server event framework using Amazon Kinesis and Protocol Buffers.</li>
+                            <li>Designed and implemented APIs to support offline ordering, retailer-to-maker referrals, and out-of-stock products, contributing to user acquisition and an overall increase in sales.</li>
+                            <li>Implemented several complex email cadences to promote and notify users of new features, with visualized A/B tests for subject lines and content.</li>
+                            <li>Integrated code coverage tracking into TravisCI to motivate better testing practices.</li>
+                        </ul>
+                        <img class="experience-img" style="width:164px;margin:40px" src="res/faire.svg"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer">
+                    <div class="experience-banner">
+                        <a href="https://spatial.is/" target="_blank"><h2 class="experience-title ten-zero-margin">Spatial</h2></a>
+                        <div class="experience-banner-data">
+                            <h2 class="ten-zero-margin">Jan to April, 2018</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div class="experience">
+                        <div class="experience-details">
+                            <h3 class="ten-zero-margin">Software Developer Intern</h3>
+                            <ul>
+                                <li>Proposed and implemented a scalable and load-balanced backend architecture for user-management, real-time messaging, and data synchronization on AWS, written in Go.</li>
+                                <li>Introduced stateless authentication and role-based authorization mechanism using JSON Web Tokens.</li>
+                                <li>Developed platform agnostic .NET web socket and http implementations for multi-threaded API clients.</li>
+                                <li>Added DevOps functionality through metrics gathering (Prometheus + Grafana), and deployment scripts (Ansible) for all servers.</li>
+                            </ul>
+                        </div>
+                        <img class="experience-img" style="width:100px;margin:40px" src="res/spatial.svg"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer">
+                    <div class="experience-banner">
+                        <a href="https://miovision.com/" target="_blank"><h2 class="experience-title ten-zero-margin">Miovision</h2></a>
+                        <div class="experience-banner-data">
+                            <h2 class="ten-zero-margin">May to Aug, 2017</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div class="experience">
+                        <div class="experience-details">
+                            <h3 class="ten-zero-margin">Software Developer Intern - Data Extraction Services Team</h3>
+                            <ul>
+                                <li>Independently wrote a performant API to export large amounts of data from Hibernate to AWS.</li>
+                                <li>Refactored the data extraction workflow to parallelize tasks, increase accuracy, and pave the way for future cost savings initiatives.</li>
+                                <li>Deployed metrics agents to monitor download speeds and cache performance of satellite servers.</li>
+                            </ul>
+                        </div>
+                        <img class="experience-img" src="res/miovision-logo.png"/>
+                    </div>
+                </div>
+            </div>
+
+            <div id="side-projects" class="section-slice">
+                <div class="layer">
+                    <h2 class="section-title">Side Projects</h2>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer" style="text-align: center">
+                    <h2 class="large-slice-text">The Latest & Greatest</h2>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">dead-drop</h2>
+                            <div class="project-links">
+                                <a href="https://github.com/srhickma/dead-drop" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <p class="project-description">dead-drop is a tool for securely transferring files via an
+                                untrusted middle-man server.</p>
+                            <p>Files can be "dropped" to any dead-drop server, yielding an object id, which can later be
+                                used to "pull" the object from the server.</p>
+                            <p>Data is encrypted and authenticated on the client side using AES-CTR and HMAC-SHA-256,
+                                and access to dead-drop servers is authenticated using asymmetric key cryptography and
+                                JSON Web Tokens. Since all encryption is client-side, server administrators or hackers
+                                cannot read or modify your files in transit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">padd</h2>
+                            <div class="project-links">
+                                <a href="https://github.com/srhickma/padd" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/padd.png"/>
+                            <p class="project-description">padd is a utility for fast and automatic formatting of
+                                context-free languages, inspired by the Golang formatter.</p>
+                            <p>The goal of padd is to act as a generic language formatter, capable of formatting any
+                                language that can be represented with a context-free grammar. A single specification
+                                file is used to specify how a language should be lexed, parsed, and then formatted
+                                during reconstruction.</p>
+                            <p>The initial purpose of padd was as a whitespace formatter for programming languages, but can also be used for any CFGs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">to_be_discovered</h2>
+                            <div class="project-links">
+                                <a href="https://github.com/srhickma/to_be_discovered" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/tbd.png"/>
+                            <p class="project-description">to_be_discovered (TBD) is a 2D side scroller game where the player must fight
+                                to survive against an endless onslaught of zombies, as well as nature
+                                itself. TBD is still in early development, and is largely an experiment in
+                                realistic (bounded) procedural generation, as well as the AI challenges
+                                associated with navigating in a random world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">Lens</h2>
+                            <div class="project-links">
+                                <a href="https://github.com/srhickma/lens" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/lens.png"/>
+                            <p class="project-description">Lens is an Emacs inspired process manager, with an embedded terminal
+                                emulator. The mission of Lens is to provide a central hub that can be easily
+                                focused (with a global keyboard shortcut) and is controlled entirely by a
+                                combination of predefined and user defined text commands. Lens is still in
+                                early development and there are still many improvements to be made to the
+                                inline tab system and process manager.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">(UW) Library for Parallel Computing</h2>
+                            <div class="project-links">
+                                <a href="https://github.com/srhickma/se101-project" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/tivac.jpg"/>
+                            <p class="project-description">Lightweight library for distributed computing across Arduino 'Like' boards.
+                                Library allows boards to execute functions with arguments and return values over
+                                serial communications using a master/slave configuration. Only tested for two
+                                boards connected, but in theory could be easily expanded to many parallel boards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">Photesto</h2>
+                            <div class="project-links">
+                                <a href="http://photesto.space" target="_blank"><i class="icon-link"></i></a>
+                                <a href="https://github.com/srhickma/photesto" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/photesto.png"/>
+                            <p class="project-description">Photesto is a website for sharing and studying from past students tests, quizzes,
+                                and assignments. Users can browse posted tests, or create an account to save and
+                                rate tests as well as post their own.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">Feral Lands</h2>
+                            <div class="project-links">
+                                <a href="https://gamejolt.com/games/feral-lands/91500" target="_blank"><i class="icon-play"></i></a>
+                                <a href="https://github.com/srhickma/feral-lands" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/feral-lands.jpg"/>
+                            <p class="project-description">Feral Lands is a 3D open world survival game set on an island isolated from the
+                                rest of humanity. You now must start from scratch to rebuild your resources
+                                while battling for survival with mother nature. Gather materials from animals
+                                and the island itself to craft tools, resources, and structures on your journey
+                                back to the top of the food chain. Will you survive?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div>
+                        <div class="project-banner">
+                            <h2 class="project-title">Posdusk</h2>
+                            <div class="project-links">
+                                <a href="https://gamejolt.com/games/posdusk/33370" target="_blank"><i class="icon-play"></i></a>
+                                <a href="https://github.com/srhickma/posdusk" target="_blank"><i class="icon-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-separator"></div>
+                        <div class="side-padded-div">
+                            <img class="project-image" src="res/posdusk.jpg"/>
+                            <p class="project-description">Pusdusk is a 2D top down survival shooter. In Posdusk, you are placed in the role
+                                of a survivor in a post apocalyptic world. You must scavenge for the supplies
+                                you need to survive while fighting endless waves of the undead.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-78855129-2', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
